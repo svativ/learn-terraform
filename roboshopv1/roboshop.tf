@@ -184,7 +184,7 @@ resource "aws_instance" "dispatch" {
   vpc_security_group_ids = ["sg-041edd0364521caf3"]
 
   tags = {
-    Name = "payment"
+    Name = "dispatch"
   }
 }
 
