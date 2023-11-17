@@ -173,7 +173,7 @@ resource "aws_instance" "payment" {
 
 resource "aws_route53_record" "payment" {
   zone_id = Z0018290WARH7MQ8A27A
-  name    = "payment-dev.sdevopsb99.online"
+  name    = "payment-dev.sdevops99.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.payment.private_ip]
