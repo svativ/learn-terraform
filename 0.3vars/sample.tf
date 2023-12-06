@@ -1,4 +1,5 @@
-*/plainvariable
+/*plainvariable*/
+
 variable "fruit_name" {
    default="apple"
 }
@@ -14,6 +15,7 @@ variable "fruits" {
    ]
    /* default = [ "apple", "banana"] // single line syntax
 }
+
 /*map variable, map of maps*/
 variable "fruit_stock_with_price"{
    default = {
@@ -21,16 +23,21 @@ variable "fruit_stock_with_price"{
    banana = 200
   }
 }
+
 /* map variable, map of maps*/
-variable "fruit_stock_with_price"{
-   default = {
-    apple = {
-       stock = 100
-       price = 3
-    }
-    banana = {
-      stock = 400
-       price = 1
+  variable "fruit_stock_with_price"{
+    default = {
+     apple = {
+     stock = 100
+     price = 3
+}
+     banana = {
+     stock = 400
+     price = 1
     }
   }
+}
+/*Access a list variables, list index starts from zero*/
+output "fruits_first" {
+   value = var.fruits[0]
 }
