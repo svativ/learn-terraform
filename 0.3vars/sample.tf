@@ -37,7 +37,3 @@ variable "fruit_stock_with_price"{
     }
   }
 }
-/*Access a list variables, list index starts from zero*/
-output "fruits_first" {
-   value = var.fruits[0]
-}
