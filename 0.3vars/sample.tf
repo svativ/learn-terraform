@@ -4,7 +4,7 @@ variable "fruit_name" {
    default="apple"
 }
 
-output "fruit_name"{
+output "fruit_name" {
     value=var.fruit_name
 }
 /*list variables*/
