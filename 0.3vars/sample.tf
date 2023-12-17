@@ -1,4 +1,4 @@
-/*plainvariable*/
+#plainvariable
 
 variable "fruit_name" {
    default="apple"
