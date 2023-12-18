@@ -1,8 +1,7 @@
-#plainvariable
-
-variable "fruit_name" {
-   default="apple"
+variable "fruit-name" {
+  default = "apple"
 }
 
-output "fruit_name" {
-    value=var.fruit_name
+output "fruit-name" {
+  value = var.fruit-name
+}
