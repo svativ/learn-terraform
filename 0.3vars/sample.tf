@@ -1,17 +1,17 @@
-variable "fruit-name" {
+# Plain Variable
+variable "fruit_name" {
   default = "apple"
 }
 
-output "fruit-name" {
-  value = var.fruit-name
+output "fruit_name" {
+  value = var.fruit_name
 }
 
-
-/*list variables*/
+# List Variable
 variable "fruits" {
   default = [
-    "apple"
+    "apple",
     "banana"
   ]
-  /* default = [ "apple", "banana" ] single line syntax*/
+  // default = [ "apple", "banana" ] // Single line syntax
 }
