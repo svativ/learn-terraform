@@ -5,3 +5,13 @@ variable "fruit-name" {
 output "fruit-name" {
   value = var.fruit-name
 }
+
+
+/*list variables*/
+variable "fruits" {
+  default = [
+    "apple"
+    "banana"
+  ]
+  /* default = [ "apple", "banana" ] single line syntax*/
+}
