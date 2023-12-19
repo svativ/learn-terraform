@@ -25,7 +25,7 @@ variable "fruit_stock"{
 
 
 /* map variable, map 0f maps*/
-variable " fruit_stock_with_price" {
+variable  "fruit_stock_with_price" {
   default = {
     apple = {
       stock = 100
