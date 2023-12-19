@@ -1,6 +1,6 @@
 /*
 variable "components" {
-  default = [ "fontend", "mongodb", "catalogue",]
+  default = [ "frontend", "mongodb", "catalogue",]
 }*/
 /*variable = "component" {
    default = {
