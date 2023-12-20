@@ -45,6 +45,7 @@ output "fruits_first" {
 
 output "fruits_second" {
   value = var.fruits [1]
+  /*value = element(var.fruits,0)*/
 }
 
 /* Access a map variable*/
