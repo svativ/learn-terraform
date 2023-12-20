@@ -1,7 +1,22 @@
+variable "ami" {
+  default = "ami-03265a0778a880afb"
+}
+
+variable "security-groups" {
+  default = [sg-041edd0364521caf3]
+}
+
+
+variable "instance_type"
+  default = "t3.small"
+
+variable "zone_id"{
+  default = "Z0018290WARH7MQ8A27A"
+}
 resource "aws_instance" "frontend" {
-  ami                    = "ami-03265a0778a880afb"
-  instance_type          = "t3.small"
-  vpc_security_group_ids = ["sg-041edd0364521caf3"]
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.security_group
 
   tags = {
     Name = "frontend"
@@ -9,7 +24,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z0018290WARH7MQ8A27A"
+  zone_id = var.zone_id
   name    = "frontend-dev.sdevops99.online"
   type    = "A"
   ttl     = 30
