@@ -4,7 +4,7 @@ variable "component"
 
 resourses "aws_instances" "instances" {
 
-  count = lrnth(var.components)
+  count = length(var.components)
 
   ami                    = "ami-03265a0778a880afb"
   instance_type          = "t3.small"
