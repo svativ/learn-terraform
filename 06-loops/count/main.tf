@@ -2,7 +2,7 @@ variable "component" {
   default = [ "frontend", "mongodb"]
 }
 
-resourses "aws_instances" "instances" {
+resources "aws_instances" "instances" {
 
   count = length(var.components)
 
