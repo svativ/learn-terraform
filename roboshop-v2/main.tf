@@ -3,7 +3,7 @@ variable "ami" {
 }
 
 variable "security-groups" {
-  default = [sg-041edd0364521caf3]
+  default = "sg-041edd0364521caf3"
 }
 
 
