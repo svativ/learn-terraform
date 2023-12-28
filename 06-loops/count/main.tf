@@ -1,8 +1,9 @@
 variable "components" {
-  default = [  "catalogue", "frontend", "mongodb" ]
+  default = [   "frontend", "mongodb" ]
 }
 
 
+/*
 resource "aws_instance" "instance" {
 
   count = length(var.components)
@@ -12,8 +13,15 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = ["sg-041edd0364521caf3"]
 
   tags = {
-    /*Name = var.components[count.index]*/
-    Name = element(var.components, count.index)
+    */
+/*Name = var.components[count.index]*//*
+
+    Name = element(var.components,count.index)
 
   }
-}
+}*/
+resource "aws_security_group" "allow_tls" {
+  count = length(var.components)
+  name     = element(var.components,count.index)
+
+
