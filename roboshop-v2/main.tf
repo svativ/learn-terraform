@@ -29,6 +29,9 @@ variable "components" {
   }
 }
 
+variable "security_groups" {
+  default = ""
+}
 resource "aws_instance" "instance" {
   for_each               = var.components
   ami                    = var.ami
