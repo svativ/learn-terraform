@@ -1,11 +1,11 @@
-variable "component" {
+variable "components" {
   default = [ "frontend", "mongodb" ]
 }
 
 
 resource "aws_instance" "instance" {
 
-  count = length(var.component)
+  count = length(var.components)
 
   ami                    = "ami-03265a0778a880afb"
   instance_type          = "t3.small"
