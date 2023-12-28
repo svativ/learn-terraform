@@ -36,7 +36,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = var.security_group
 
   tags = {
-    Name = var.components[each.key].name
+    Name = lookup (each.value, "name", null)
   }
 }
 
@@ -48,3 +48,6 @@ resource "aws_instance" "instance" {
 #  records = [aws_instance.frontend.private_ip]
 #}
 
+output "instances" {
+  value = aws_instance.instance
+}
