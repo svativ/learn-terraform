@@ -40,14 +40,15 @@ resource "aws_instance" "instance" {
   }
 }
 
-#resource "aws_route53_record" "frontend" {
-#  zone_id = var.zone_id
-#  name    = "frontend-dev.sdevops99.online"
-#  type    = "A"
-#  ttl     = 30
-#  records = [aws_instance.frontend.private_ip]
-#}
-
-output "instances" {
-  value = aws_instance.instance
+resource "aws_route53_record" "record" {
+  zone_id = var.zone_id
+  for_each = var.components
+  name    = "$lookup(each.value,"name",null)}.sdevops99.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.frontend.private_ip]
 }
+
+#output "instances" {
+#  value = aws_instance.instance
+#}
