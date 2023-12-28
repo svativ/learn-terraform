@@ -2,7 +2,7 @@ variable "ami" {
   default = "ami-03265a0778a880afb"
 }
 
-variable "security-group" {
+variable "security-groups" {
   default = [sg-041edd0364521caf3]
 }
 
