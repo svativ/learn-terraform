@@ -1,3 +1,6 @@
+
+
 module "test" {
-  source = "./local-module"
+  source        = "./local-module"
+
 }
