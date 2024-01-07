@@ -1,4 +1,3 @@
-
 module "components" {
 
   for_each = var.components
