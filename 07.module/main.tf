@@ -1,4 +1,4 @@
-module "test" {
-  source        = "./local-module"
 
+module "test" {
+  source = "./local-module"
 }
