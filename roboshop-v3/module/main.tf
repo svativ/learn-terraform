@@ -11,7 +11,7 @@ resource "aws_instance" "instance" {
 }
 
 resource "aws_route53_record" "record" {
-  for_each = var.components
+
   zone_id  = var.zone_id
   name     = "${var.name}-dev.sdevops99.online"
   type     = "A"
@@ -19,4 +19,10 @@ resource "aws_route53_record" "record" {
   records  = [aws_instance.instance.private_ip]
 }
 
-
+/*resource "aws_route53_record" "record" {
+  zone_id = var.zone_id
+  name    = "${var.name}-dev.rdevopsb72.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.instance.private_ip]
+}*/
