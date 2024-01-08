@@ -1,4 +1,4 @@
 variable "name" {}
 variable "zone_id" {}
-variable "instance-type" {}
+variable "instance_type" {}
 variable "security_groups" {}
