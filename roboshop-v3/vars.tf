@@ -51,6 +51,7 @@ variable "components" {
     rabbitmq = {
       name          = "rabbitmq"
       instance_type = "t3.micro"
+    }
     dispatch  = {
       name          = "dispatch"
       instance_type = "t3.micro"
