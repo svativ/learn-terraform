@@ -13,5 +13,5 @@ variable "test" {
 }
 
 output "test" {
-  default = var.test
+  value = var.test
 }
